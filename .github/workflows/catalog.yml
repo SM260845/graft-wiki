@@ -15,6 +15,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: catalog
+  cancel-in-progress: true
+
 jobs:
   catalog:
     runs-on: ubuntu-latest
